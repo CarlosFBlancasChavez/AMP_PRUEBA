@@ -15,8 +15,8 @@
 </head>
 <body>
     <!-- SUBMENU DE MARCA DEPENDIENDO DEL PRODUCTO -->
-<!-- TOPBAR -->
-<div class="bg-white border-b">
+<!-- TOPBAR RESPONSIVE -->
+<header class="bg-white border-b shadow-sm">
   <div class="max-w-7xl mx-auto px-4">
     <div class="flex items-center justify-between h-16">
 
@@ -25,10 +25,10 @@
         <img src="logo.png" alt="DS3 Comunicaciones" class="h-10 object-contain">
       </div>
 
-      <!-- INFO CONTACTO (DESKTOP) -->
-      <div class="hidden lg:flex items-center gap-8 text-sm text-gray-700">
+      <!-- INFO CONTACTO (SOLO DESKTOP) -->
+      <div class="hidden xl:flex items-center gap-8 text-sm text-gray-700">
 
-        <!-- Teléfonos -->
+        <!-- Telefono 1 -->
         <div class="flex items-center gap-2">
           <i class="fa-solid fa-phone text-blue-600"></i>
           <div class="leading-tight">
@@ -37,6 +37,7 @@
           </div>
         </div>
 
+        <!-- Telefono 2  -->
         <div class="flex items-center gap-2">
           <i class="fa-solid fa-phone text-blue-600"></i>
           <div class="leading-tight">
@@ -51,15 +52,16 @@
           <span>netperu100@hotmail.com</span>
         </div>
 
-        <!-- Ubicación -->
+        <!-- Ubicacion -->
         <div class="flex items-center gap-2">
           <i class="fa-solid fa-location-dot text-blue-600"></i>
           <span>Lima, PERÚ</span>
         </div>
+
       </div>
 
       <!-- BUSCADOR -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center">
         <button class="p-2 rounded-full hover:bg-gray-100">
           <i class="fa-solid fa-magnifying-glass text-gray-700"></i>
         </button>
@@ -67,7 +69,8 @@
 
     </div>
   </div>
-</div>
+</header>
+
 
     <nav class="bg-white border-b border-gray-200 shadow-sm">
         <div class="relative">
@@ -573,3 +576,4 @@
     <script src="./js/change_tabs.js"></script>
 </body>
 </html>
+
