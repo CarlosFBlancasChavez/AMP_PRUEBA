@@ -14,82 +14,70 @@ body {
     display: none; /* Para Chrome, Safari y Opera */
   }
 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
 .topbar {
   background: #fff;
-  border-bottom: 1px solid #e5e7eb;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-bottom: 1px solid #ddd;
+  width: 100%;
 }
 
-.topbar-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 16px;
-  height: 64px;
 
+.topbar-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 12px;
+
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  flex-wrap: nowrap;        
+  overflow: hidden;         
 }
 
-/* LOGO */
-.logo img {
-  height: 40px;
-  object-fit: contain;
+
+.topbar-logo img {
+  height: 32px;
+  display: block;
 }
 
-.contact-info {
-  display: flex;
-  gap: 32px;
-  font-size: 14px;
-  color: #374151;
+
+.topbar-info {
+  display: none;
 }
 
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
 
-.contact-item i {
-  color: #2563eb;
-}
-
-/* ACCIONES */
-.actions {
+.topbar-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
+  flex-shrink: 0;
 }
 
-.search-btn {
+
+.search-btn,
+.mobile-phone {
   background: none;
   border: none;
-  cursor: pointer;
-  font-size: 18px;
-  color: #374151;
-}
-
-.search-btn:hover {
-  color: #2563eb;
-}
-
-/* MOBILE */
-.mobile-call {
-  display: none;
   font-size: 20px;
   color: #2563eb;
+  cursor: pointer;
   text-decoration: none;
 }
 
-@media (min-width: 480px) {
+
+@media (min-width: 768px) {
   .topbar-container {
     height: 60px;
+    padding: 0 20px;
   }
 
   .topbar-logo img {
@@ -97,15 +85,6 @@ body {
   }
 }
 
-@media (min-width: 768px) {
-  .topbar-container {
-    padding: 0 20px;
-  }
-
-  .search-btn {
-    font-size: 19px;
-  }
-}
 
 @media (min-width: 1024px) {
 
@@ -113,55 +92,38 @@ body {
     height: 64px;
   }
 
-  .topbar-logo img {
-    height: 40px;
-  }
-
+ 
   .topbar-info {
     display: flex;
     align-items: center;
     gap: 24px;
     font-size: 14px;
-    color: #444;
+    color: #333;
+    white-space: nowrap; 
   }
 
   .info-item {
     display: flex;
     align-items: center;
     gap: 8px;
-    white-space: nowrap;
   }
 
   .info-item i {
     color: #2563eb;
-    font-size: 15px;
   }
 
+  
   .mobile-phone {
     display: none;
   }
 }
 
-@media (min-width: 1280px) {
 
+@media (min-width: 1280px) {
   .topbar-info {
     gap: 32px;
     font-size: 15px;
   }
-
-  .topbar-container {
-    padding: 0 32px;
-  }
 }
 
-@media (min-width: 1600px) {
-
-  .topbar-container {
-    max-width: 1600px;
-  }
-
-  .topbar-info {
-    font-size: 16px;
-  }
-}
 
