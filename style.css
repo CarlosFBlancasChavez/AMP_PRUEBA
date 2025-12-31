@@ -87,35 +87,81 @@ body {
   text-decoration: none;
 }
 
-
-@media (max-width: 1024px) {
-
-  /* Oculta info larga */
-  .topbar-info {
-    display: none;
-  }
-
-  /* Muestra el telefono */
-  .mobile-phone {
-    display: block;
-  }
-}
-
-@media (max-width: 480px) {
-
+@media (min-width: 480px) {
   .topbar-container {
-    height: 56px;
+    height: 60px;
   }
 
   .topbar-logo img {
-    height: 34px;
+    height: 36px;
+  }
+}
+
+@media (min-width: 768px) {
+  .topbar-container {
+    padding: 0 20px;
   }
 
   .search-btn {
-    font-size: 16px;
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .topbar-container {
+    height: 64px;
+  }
+
+  .topbar-logo img {
+    height: 40px;
+  }
+
+  .topbar-info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 14px;
+    color: #444;
+  }
+
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .info-item i {
+    color: #2563eb;
+    font-size: 15px;
   }
 
   .mobile-phone {
-    font-size: 18px;
+    display: none;
   }
 }
+
+@media (min-width: 1280px) {
+
+  .topbar-info {
+    gap: 32px;
+    font-size: 15px;
+  }
+
+  .topbar-container {
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 1600px) {
+
+  .topbar-container {
+    max-width: 1600px;
+  }
+
+  .topbar-info {
+    font-size: 16px;
+  }
+}
+
